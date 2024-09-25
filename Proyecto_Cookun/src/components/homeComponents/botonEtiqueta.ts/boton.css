@@ -1,5 +1,6 @@
-.txtButton {
+.FilterButton {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #41613C;
 }
