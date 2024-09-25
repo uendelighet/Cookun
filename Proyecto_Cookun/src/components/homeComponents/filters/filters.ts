@@ -44,6 +44,6 @@ class imgMain extends HTMLElement {
 	}
 }
 
-customElements.define('img-main', imgMainProps);
-export default imgMainProps;
+customElements.define('img-main', imgMain);
+export default imgMain;
 
