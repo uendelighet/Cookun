@@ -1,10 +1,10 @@
 
-export enum imgMain {
+export enum imgMainProps {
 	'img' = 'img',
 }
 	
 
-class imgMainProps extends HTMLElement {
+class imgMain extends HTMLElement {
 	img?: string;
 
 	constructor() {
@@ -15,7 +15,6 @@ class imgMainProps extends HTMLElement {
 	static get observedAttributes() {
 		const attrs: Record<imgMainProps, null> = {
 			img: null,
-			tittle: null,
 		};
 		return Object.keys(attrs);
 	}
