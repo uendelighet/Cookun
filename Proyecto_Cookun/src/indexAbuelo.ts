@@ -1,3 +1,5 @@
+ import OrangeButtons, { Attribute } from './components/homeComponents/navbutton/barbuttons'
+ 
  class AppContainer extends HTMLElement {
   constructor() {
     super();
@@ -12,6 +14,7 @@
   render() {
     if (this.shadowRoot) {
       this.shadowRoot.innerHTML= `
+
       <home>
         <nav>
           <button>Home</button>
@@ -35,6 +38,16 @@
       
       
       `;
+
+
+      // Para meter elementos de componentes propios, los creas de esta manera
+      const barButtonHome = this.ownerDocument.createElement('bar-button') as OrangeButtons;
+
+      barButtonHome.setAttribute(Attribute.button, 'Home');
+
+      // Append child ya sea al shadow root o a algun container 
+      // const contenedor = this.ownerDocument.createElement('div') ======> contenedor.appendChild(barButtonHome)
+      this.shadowRoot?.appendChild(barButtonHome);
     } 
   }
 }

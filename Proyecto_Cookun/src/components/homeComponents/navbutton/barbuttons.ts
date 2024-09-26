@@ -20,9 +20,13 @@ export class OrangeButtons extends HTMLElement {
 
     }
 
-    connectedCallback(propName:Attribute, oldValue: string |undefined, newValue: string){
+    attributeChangedCallback(propName:Attribute, oldValue: string |undefined, newValue: string){
+        this[propName] = newValue ? newValue : undefined;
     }
     
+    connectedCallback() {
+        this.render();
+    }
     
     render (){
 
