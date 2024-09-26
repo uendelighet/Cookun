@@ -1,10 +1,4 @@
-
-//import * as Modules from'./components/indexPadre';
-//import { workers } from './Data/data'; 
-
-
-
-class AppContainer extends HTMLElement {
+ class AppContainer extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -16,7 +10,32 @@ class AppContainer extends HTMLElement {
   }
 
   render() {
-  
+    if (this.shadowRoot) {
+      this.shadowRoot.innerHTML= `
+      <home>
+        <nav>
+          <button>Home</button>
+          <button>Login</button>
+
+          <links> 
+              <a>Explore</a>
+              <a>Create</a
+          </links>
+
+          <div class= "Search">
+           
+            <input type="text" placeholder="Search...">
+          
+          </div>
+        
+        </nav>
+      
+      </home>
+   
+      
+      
+      `;
+    } 
   }
 }
 

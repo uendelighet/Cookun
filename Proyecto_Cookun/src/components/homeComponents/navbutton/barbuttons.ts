@@ -1,14 +1,12 @@
 export enum Attribute {
 
-    "image" ="image",
-  
+    "button" ="button", 
 
 }
 
-export class images extends HTMLElement {
+export class OrangeButtons extends HTMLElement {
 
-    image?: string ;
-
+    button?: string ;
 
     constructor (){
 
@@ -31,12 +29,10 @@ export class images extends HTMLElement {
         if(this.shadowRoot) {
             this.shadowRoot.innerHTML= `
             <link rel="stylesheet" href= "./src/components/homeComponents/navbutton/barbuttons.css">  
+            <section>
+                <button>${this.button || 'No button'}</button>
+            </section>
             
-            <div class= "images">
-                <img src="${this.image}"></img> 
-            
-            </div>
-
             `;
 
         }
@@ -44,5 +40,5 @@ export class images extends HTMLElement {
     }
 }
 
-customElements.define ('search-bar', images);
-export default images;
+customElements.define ('home-button', OrangeButtons);
+export default OrangeButtons;

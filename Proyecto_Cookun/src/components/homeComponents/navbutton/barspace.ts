@@ -1,13 +1,13 @@
 export enum Attribute {
 
-    "image" ="image",
+    "search" ="search",
   
 
 }
 
-export class images extends HTMLElement {
+export class Search extends HTMLElement {
 
-    image?: string ;
+    search?: string ;
 
 
     constructor (){
@@ -32,10 +32,11 @@ export class images extends HTMLElement {
             this.shadowRoot.innerHTML= `
             <link rel="stylesheet" href= "./src/components/homeComponents/navbutton/barbuttons.css">  
             
-            <div class= "images">
-                <img src="${this.image}"></img> 
-            
-            </div>
+                <div class="search-bar">
+                            <input ${this.search || 'No search'}>
+                          
+                </div>     
+
 
             `;
 
@@ -44,5 +45,5 @@ export class images extends HTMLElement {
     }
 }
 
-customElements.define ('search-bar', images);
-export default images;
+customElements.define ('search-bar', Search);
+export default Search;
